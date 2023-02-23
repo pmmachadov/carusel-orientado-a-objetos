@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel</title>
+</head>
+
+<body>
+    <span id="nombreImagen"></span>
+    <div>
+        <button onclick="retrocede()">Anterior</button>
+        <img id="imagen" alt="" src="./img/">
+        <button onclick="avanza()">Siguiente</button>
+    </div>
+
+    <script>
+        
+        let posicion = 0;
+
+        function avanza() {
+            posicion++;
+            if (posicion >= imagenes.length) {
+                posicion = 0;
+            }
+            mostrarImagen();
+        }
+
+        function retrocede() {
+            posicion--;
+            if (posicion < 0) {
+                posicion = imagenes.length - 1;
+            }
+            mostrarImagen();
+        }
+
+        function mostrarImagen() {
+            let imagen = RUTA + imagenes[posicion]; // Se crea la ruta completa de la imagen a mostrar. RUTA es la constante que contiene la ruta de las imágenes, e imagenes[posicion] es el nombre de la imagen que se va a mostrar.
+            document.getElementById("imagen").src = imagen;
+            document.getElementById("nombreImagen").innerHTML = imagen;
+        }
+
+    </script>
+</body>
+
+</html>
