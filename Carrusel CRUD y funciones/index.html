@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel CRUD con funciones</title>
+</head>
+
+<body>
+
+
+    <div class="menuPrincipal">
+        <button type="button" onclick="crearImagen()">Crear Imagen</button>
+        <button type="button" onclick="buscar()">Buscar Imagen</button>
+        <button type="button" onclick="modificarImagen()">Modificar Imagen</button>
+        <button type="button" onclick="borrarImagen()">Borrar Imagen</button>
+        <button type="button" onclick="salir()">Salir</button>
+    </div>
+
+    <div class="BotonesDireccion">
+        <h1 id="tema"></h1>
+        <span id="nombre"></span>
+        <button type="button" onclick="retrocede()">Anterior</button>
+        <img id="image" alt="Image" src="./img/Aries.jpg">
+        <button type="button" onclick="avanza()">Siguiente</button>
+        <p id="descripcion"></p>
+        <p id="imagen"></p>
+        <p id="titulo"></p>
+    </div>
+
+    <details>
+        <summary>
+            Carrusel CRUD con funciones
+        </summary>
+
+        <h2>Ejercicio:</h2>
+
+        Crear un carrusel de imágenes con las siguientes características:
+        funcion avanza
+        funcion retrocede
+        funcion crearImagen
+        funcion buscarImagen
+        funcion modificarImagen
+        funcion borrarImagen
+        funcion salir
+        funcion mostrarImagen
+
+        Se deben usar funciones unicamente. Las imagenes estan dadas en la carpeta "./img". Se debe usar la variable posicion para saber en que posicion del array de imagenes se encuentra.
+
+        <h2>Pseudo codigo</h2>
+
+        1. Crear un array de objetos con las siguientes propiedades: image, name title, description
+        2. Crear una variable posicion para saber en que posicion del array de imagenes se encuentra, llamada "posicion"
+        3. Crear una funcion "avanza" que aumente en 1 la variable posicion
+        4. Crear una funcion "retrocede" que disminuya en 1 la variable posicion
+        5. Crear una funcion "crearImagen" que pida al usuario los datos con prompt y los guarde en el array de imagenes
+        7. Crear una funcion "modificarImagen" que pida al usuario el nombre de la imagen con prompt y la busque en el array de imagenes y modifique los datos de la imagen
+        8. Crear una funcion "borrarImagen" que pida al usuario el nombre de la imagen con prompt y la busque en el array de imagenes y la borre
+        9. Crear una funcion "salir" que salga del programa
+        10. Crear una variable que muestre el name de la imagen en el div con id "name"
+        11. Crear una variable que muestre el titulo del tema en el div con id "tema"
+        12. Crear una variable que muestre la descripcion de la imagen en el div con id "description"
+    
+    </details>
+
+
+    <script src="./js/imagenes.js"></script>
+    <script src="./js/functions.js"></script>
+</body>
+
+</html>
