@@ -59,11 +59,14 @@ function modificarImagen() {
 }
 
 function mostrarImagen() {
-    let image = "./img/" + images[posicion].image;
-    document.getElementById("imagen").src = image;
-    document.getElementById("nombre").innerHTML = images[posicion].name;
-    document.getElementById("titulo").innerHTML = images[posicion].title;
-    document.getElementById("descripcion").innerHTML = images[posicion].description;
+    let image = "../img/" + images[posicion].image;
+    let name = images[posicion].name;
+    let title = images[posicion].title;
+    let description = images[posicion].description;
+    document.getElementById("image").src = image;
+    document.getElementById("name").innerHTML = name;
+    document.getElementById("title").innerHTML = title;
+    document.getElementById("description").innerHTML = description;
 }
 
 function avanza() {
@@ -72,8 +75,6 @@ function avanza() {
         posicion = 0;
     }
     mostrarImagen();
-console.log(images);
-
 }
 
 function retrocede() {
@@ -82,8 +83,6 @@ function retrocede() {
         posicion = images.length - 1;
     }
     mostrarImagen();
-console.log(images);
-
 }
 
 function salir() {

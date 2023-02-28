@@ -92,5 +92,3 @@ const images = [
 
 const TEMA = 'Signos del Zodiaco';
 document.getElementById('tema').innerHTML = TEMA;
-
-
