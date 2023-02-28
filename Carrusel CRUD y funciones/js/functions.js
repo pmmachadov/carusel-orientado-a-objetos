@@ -28,7 +28,7 @@ function crearImagen() {
 
 function borrarImagen() {
     const nombreImagen = prompt("Ingrese el nombre de la imagen");
-    const image = images.find(image => image.name.toLowerCase() == nombreImagen);
+    const image = images.find(image => image.name.toLowerCase() == nombreImagen); // Se busca la imagen por el nombre
     if (image) {
         const index = images.indexOf(image);
         confirm("¿Está seguro de eliminar la imagen?");
@@ -44,19 +44,33 @@ console.log(images);
 
 function modificarImagen() {
     let nombreImagen = prompt("Ingrese el nombre de la imagen");
-    let posicion = images.findIndex(image => image.name.toLowerCase() == nombreImagen);
-    if (posicion == -1) {
+    let indice = images.findIndex(image => image.name.toLowerCase() == nombreImagen);
+    if (indice == -1) {
         alert("La imagen no existe");
     } else {
-        let name = prompt("Ingrese el nombre de la imagen");
-        let title = prompt("Ingrese el titulo de la imagen");
-        let description = prompt("Ingrese la descripcion de la imagen");
-        images[posicion].name = name;
-        images[posicion].title = title;
-        images[posicion].description = description;
+        posicion = indice;
+        mostrarImagen();
+        let name = prompt("Ingrese el nombre de la imagen", images[indice].name);
+        let title = prompt("Ingrese el titulo de la imagen", images[indice].title);
+        let description = prompt("Ingrese la descripcion de la imagen", images[indice].description);
+        // images[indice].name = name;
+        // images[indice].title = title;
+        // images[indice].description = description;
+
+        let imagenModificada =  {
+            image: images[indice].image,
+            name: name,
+            title: title,
+            description: description
+         }
+         images.splice(indice, 1, imagenModificada);      
+         images[indice] = imagenModificada;   
         alert("Imagen modificada con exito");
+        mostrarImagen();
     }
 }
+
+
 
 function mostrarImagen() {
     let image = "../img/" + images[posicion].image;
@@ -88,3 +102,4 @@ function retrocede() {
 function salir() {
     window.close();
 }
+

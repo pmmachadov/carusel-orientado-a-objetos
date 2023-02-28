@@ -58,7 +58,7 @@
         Se deben usar funciones unicamente. Las imagenes estan dadas en la carpeta "../img". Se debe usar la variable
         posicion para saber en que posicion del array de imagenes se encuentra.
 
-        <h2>Pseudo codigo</h2>
+        <h2>Pseudo codigo general</h2>
 
         1. Crear un array de objetos con las siguientes propiedades: image, name title, description
         2. Crear una variable posicion para saber en que posicion del array de imagenes se encuentra, llamada "posicion"
@@ -73,6 +73,93 @@
         10. Crear una variable que muestre el name de la imagen en el div con id "name"
         11. Crear una variable que muestre el titulo del tema en el div con id "tema"
         12. Crear una variable que muestre la descripcion de la imagen en el div con id "description"
+
+        <h2>Pseudo codigo de las funciones</h2>
+
+Funcion buscar
+
+Inicio
+    Ingresar el nombre de la imagen a buscar
+    Recorrer el array de imagenes
+        Si el nombre de la imagen es igual al nombre de la imagen a buscar
+            Mostrar mensaje de que la imagen existe en la posición i
+        Fin si
+    Fin recorrer
+Fin
+
+Funcion crearImagen
+
+Inicio
+    Ingresar el nombre de la imagen
+    Ingresar el titulo de la imagen
+    Ingresar la descripcion de la imagen
+    Crear un objeto con los datos ingresados
+    Agregar el objeto al array de imagenes
+    Mostrar mensaje de que la imagen fue creada con exito
+Fin
+
+Funcion borrarImagen
+
+Inicio
+    Ingresar el nombre de la imagen a borrar
+    Recorrer el array de imagenes
+        Si el nombre de la imagen es igual al nombre de la imagen a borrar
+            Eliminar el elemento en la posición i
+            Mostrar mensaje de que la imagen fue eliminada
+        Fin si
+    Fin recorrer
+Fin
+
+Funcion modificarImagen
+
+Inicio
+    Ingresar el nombre de la imagen a modificar
+    Recorrer el array de imagenes
+        Si el nombre de la imagen es igual al nombre de la imagen a modificar
+            Ingresar el nuevo nombre de la imagen
+            Ingresar el nuevo titulo de la imagen
+            Ingresar la nueva descripcion de la imagen
+            Modificar los datos de la imagen en la posición i
+            Mostrar mensaje de que la imagen fue modificada con exito
+        Fin si
+    Fin recorrer
+Fin
+
+Funcion mostrarImagen
+
+Inicio
+    Mostrar la imagen en la posición posicion
+    Mostrar el nombre de la imagen en la posición posicion
+    Mostrar el titulo de la imagen en la posición posicion
+    Mostrar la descripcion de la imagen en la posición posicion
+Fin
+
+Funcion avanza
+
+Inicio
+    Sumar 1 a la posición
+    Si la posición es mayor o igual al tamaño del array
+        Poner la posición en 0
+    Fin si
+    Mostrar la imagen
+Fin
+
+Funcion retrocede
+
+Inicio
+    Restar 1 a la posición
+    Si la posición es menor a 0
+        Poner la posición en el tamaño del array - 1
+    Fin si
+
+    Mostrar la imagen
+
+Fin
+Funcion salir
+Inicio
+    Cerrar la ventana
+Fin
+
     </details>
 
 
